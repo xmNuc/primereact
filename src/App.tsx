@@ -21,10 +21,15 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className="App p-input-filled">
       <header className="App-header">
         <Toast ref={toastRef} />
-        <InputText value={text} onChange={(e) => setText(e.target.value)} />
+        <span className="p-float-label">
+          <InputText value={text} onChange={(e) => setText(e.target.value)} />
+          <label htmlFor="input_text" className="p-component">
+            Name
+          </label>
+        </span>
         {text}
         <br />
         <Button type="button" label="Submit" icon="pi pi-check" onClick={onClickBtn} />
