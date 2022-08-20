@@ -14,8 +14,9 @@ const FileUploadDemo = () => {
 
   const onUpload = () => {};
 
-  const onTemplateSelect = (e: { files: any }) => {
+  const onTemplateSelect = (e: any) => {
     console.log('select e', e);
+    console.log('select ORG e', e.originalEvent);
 
     let _totalSize = totalSize;
     let files = e.files;
