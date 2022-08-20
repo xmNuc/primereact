@@ -9,6 +9,7 @@ import 'primeicons/primeicons.css';
 import { InputText } from 'primereact/inputtext';
 import { Button } from 'primereact/button';
 import { Toast } from 'primereact/toast';
+import Uploader from './components/Uploader';
 
 function App() {
   const [text, setText] = useState('');
@@ -24,6 +25,7 @@ function App() {
     <div className="App p-input-filled">
       <header className="App-header">
         <Toast ref={toastRef} />
+        <Uploader />
         <span className="p-float-label">
           <InputText value={text} onChange={(e) => setText(e.target.value)} />
           <label htmlFor="input_text" className="p-component">
