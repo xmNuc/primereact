@@ -1,15 +1,13 @@
 import React, { useRef, useState } from 'react';
-import logo from './logo.svg';
 import './App.css';
-
 import 'primereact/resources/themes/arya-blue/theme.css';
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
-
 import { InputText } from 'primereact/inputtext';
 import { Button } from 'primereact/button';
 import { Toast } from 'primereact/toast';
 import Uploader from './components/Uploader';
+import { InputSw } from './components/InputSw';
 
 function App() {
   const [text, setText] = useState('');
@@ -36,6 +34,7 @@ function App() {
         <br />
         <Button type="button" label="Submit" icon="pi pi-check" onClick={onClickBtn} />
       </header>
+      <InputSw />
     </div>
   );
 }
