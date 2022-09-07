@@ -6,7 +6,7 @@ export const InputSw = () => {
   const [checked1, setChecked1] = useState(false);
 
   const handleClick = () => {
-    console.log('CLICKED!');
+    console.log('test');
   };
 
   return (
