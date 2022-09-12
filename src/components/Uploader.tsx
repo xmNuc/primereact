@@ -6,7 +6,7 @@ import { Button } from 'primereact/button';
 import { Tooltip } from 'primereact/tooltip';
 import { Tag } from 'primereact/tag';
 
-const FileUploadDemo = () => {
+export const FileUploadDemo = () => {
   const [totalSize, setTotalSize] = useState(0);
   const toast = useRef(null);
   const fileUploadRef = useRef(null);
@@ -185,8 +185,3 @@ const FileUploadDemo = () => {
     </div>
   );
 };
-
-export default FileUploadDemo;
-function callback() {
-  throw new Error('Function not implemented.');
-}
