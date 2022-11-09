@@ -6,8 +6,9 @@ import 'primeicons/primeicons.css';
 import { InputText } from 'primereact/inputtext';
 import { Button } from 'primereact/button';
 import { Toast } from 'primereact/toast';
-import Uploader from './components/Uploader';
+import { FileUploadDemo } from './components/Uploader';
 import { InputSw } from './components/InputSw';
+import { ListBoxX } from './components/ListBoxX';
 
 function App() {
   const [text, setText] = useState('');
@@ -22,8 +23,9 @@ function App() {
   return (
     <div className="App p-input-filled">
       <header className="App-header">
+        <ListBoxX />
         <Toast ref={toastRef} />
-        <Uploader />
+        <FileUploadDemo />
         <span className="p-float-label">
           <InputText value={text} onChange={(e) => setText(e.target.value)} />
           <label htmlFor="input_text" className="p-component">

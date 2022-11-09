@@ -38,7 +38,6 @@ export const FileUploadDemo = () => {
 
   const onTemplateRemove = (file: { name?: any; objectURL?: any; size?: number | undefined }) => {
     setTotalSize(totalSize);
-    callback();
   };
 
   const onTemplateClear = () => {
