@@ -12,17 +12,19 @@ export const ListBoxX = () => {
   const handleRemove = (e: React.MouseEvent<HTMLDivElement, MouseEvent>, option: Idata) => {
     console.log('Selected data', selectedData);
     // e.stopPropagation();
+    const numberGenerator = () => Math.floor(Math.random() * 1000 * 200);
     const newObj = {
       id: uuidv4(),
-      name: 'NuC ' + Math.floor(Math.random() * 1000 * 200),
-      price: 65,
-      isins: ['1234', '1234', '1234', '1234'],
+      name: 'NuC ' + numberGenerator(),
+      price: numberGenerator(),
+      isins: [
+        `${numberGenerator()}`,
+        `${numberGenerator()}`,
+        `${numberGenerator()}`,
+        `${numberGenerator()}`,
+      ],
     };
-
-    console.log(
-      'Remove',
-      setDataArr((prev) => prev.filter((obj) => obj.id !== option.id))
-    );
+    setDataArr((prev) => prev.filter((obj) => obj.id !== option.id));
     setDataArr((prev) => [...prev, newObj]);
   };
 
