@@ -6,12 +6,11 @@ import { v4 as uuidv4 } from 'uuid';
 export const ListBoxX = () => {
   const [dataArr, setDataArr] = useState<Idata[]>(data);
   const [selectedData, setSelectedData] = useState<Idata[]>([]);
-  console.log('dataArr', dataArr);
-  console.log('Selected data before', selectedData);
+  // console.log('dataArr', dataArr);
+  // console.log('Selected data before', selectedData);
 
-  const handleRemove = ( option: Idata) => {
-  // const handleRemove = (e: React.MouseEvent<HTMLDivElement, MouseEvent>, option: Idata) => {
-    console.log('Selected data', selectedData);
+  const handleRemove = (option: Idata) => {
+    // const handleRemove = (e: React.MouseEvent<HTMLDivElement, MouseEvent>, option: Idata) => {
     // e.stopPropagation();
     const numberGenerator = () => Math.floor(Math.random() * 1000 * 200);
     const newObj = {
@@ -25,10 +24,8 @@ export const ListBoxX = () => {
         `${numberGenerator()}`,
       ],
     };
-
-    console.log(option.id);
-    const asd = dataArr.filter((obj) => obj.id !== option.id));
-    setDataArr((prev) => [...prev, newObj]);
+    const filteredData = dataArr.filter((obj) => obj.id !== option.id);
+    setDataArr([...filteredData, newObj]);
 
     // setDataArr((prev) => prev.filter((obj) => obj.id !== option.id));
     // setDataArr((prev) => [...prev, newObj]);
