@@ -9,7 +9,8 @@ export const ListBoxX = () => {
   console.log('dataArr', dataArr);
   console.log('Selected data before', selectedData);
 
-  const handleRemove = (e: React.MouseEvent<HTMLDivElement, MouseEvent>, option: Idata) => {
+  const handleRemove = ( option: Idata) => {
+  // const handleRemove = (e: React.MouseEvent<HTMLDivElement, MouseEvent>, option: Idata) => {
     console.log('Selected data', selectedData);
     // e.stopPropagation();
     const numberGenerator = () => Math.floor(Math.random() * 1000 * 200);
@@ -24,15 +25,21 @@ export const ListBoxX = () => {
         `${numberGenerator()}`,
       ],
     };
-    setDataArr((prev) => prev.filter((obj) => obj.id !== option.id));
+
+    console.log(option.id);
+    const asd = dataArr.filter((obj) => obj.id !== option.id));
     setDataArr((prev) => [...prev, newObj]);
+
+    // setDataArr((prev) => prev.filter((obj) => obj.id !== option.id));
+    // setDataArr((prev) => [...prev, newObj]);
   };
 
   const itemTemplate = (option: any) => {
     return (
       <div
         onClick={(e) => {
-          handleRemove(e, option);
+          handleRemove(option);
+          // handleRemove(e, option);
         }}
       >
         {option.name}
