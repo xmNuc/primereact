@@ -9,6 +9,7 @@ import { Toast } from 'primereact/toast';
 import { FileUploadDemo } from './components/Uploader';
 import { InputSw } from './components/InputSw';
 import { ListBoxX } from './components/ListBoxX';
+import { PickListDemo } from './components/Pisclist';
 
 function App() {
   const [text, setText] = useState('');
@@ -23,6 +24,7 @@ function App() {
   return (
     <div className="App p-input-filled">
       <header className="App-header">
+        <PickListDemo />
         <ListBoxX />
         <Toast ref={toastRef} />
         <FileUploadDemo />

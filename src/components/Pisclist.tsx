@@ -1,27 +1,27 @@
 import React, { useState, useEffect } from 'react';
 import { PickList } from 'primereact/picklist';
-import { data } from './data';
+import { data, Idata } from './data';
 
-const PickListDemo = () => {
-  const [source, setSource] = useState([]);
-  const [target, setTarget] = useState([]);
+export const PickListDemo = () => {
+  const [source, setSource] = useState<Idata[]>([]);
+  const [target, setTarget] = useState<Idata[]>([]);
 
-  const onChange = (event: {
-    source: React.SetStateAction<never[]>;
-    target: React.SetStateAction<never[]>;
+  useEffect(() => {
+    setSource(data);
+  }, []);
+
+  const onChange = (e: {
+    source: React.SetStateAction<Idata[]>;
+    target: React.SetStateAction<Idata[]>;
   }) => {
-    setSource(event.source);
-    setTarget(event.target);
+    setSource(e.source);
+    setTarget(e.target);
   };
 
-  const itemTemplate = (item: any) => {
+  const itemTemplate = (item: { name: string }) => {
     return (
       <div className="product-item">
-        <div className="product-list-detail">
-          <h5 className="mb-2">{item.name}</h5>
-          <i className="pi pi-tag product-category-icon"></i>
-          <span className="product-category">{item.category}</span>
-        </div>
+        <h5 className="mb-2">{item.name}</h5>
       </div>
     );
   };
@@ -38,9 +38,9 @@ const PickListDemo = () => {
           sourceStyle={{ height: '342px' }}
           targetStyle={{ height: '342px' }}
           onChange={onChange}
-          //   filterBy="name"
-          //   sourceFilterPlaceholder="Search by name"
-          //   targetFilterPlaceholder="Search by name"
+          // filterBy="name"
+          // sourceFilterPlaceholder="Search by name"
+          // targetFilterPlaceholder="Search by name"
         />
       </div>
     </div>
