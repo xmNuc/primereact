@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { PickList } from 'primereact/picklist';
+import { PickList, PickListChangeParams } from 'primereact/picklist';
 import { data, Idata } from './data';
 
 export const PickListDemo = () => {
@@ -10,10 +10,7 @@ export const PickListDemo = () => {
     setSource(data);
   }, []);
 
-  const onChange = (e: {
-    source: React.SetStateAction<Idata[]>;
-    target: React.SetStateAction<Idata[]>;
-  }) => {
+  const onChange = (e: PickListChangeParams) => {
     setSource(e.source);
     setTarget(e.target);
   };
@@ -21,7 +18,7 @@ export const PickListDemo = () => {
   const itemTemplate = (item: { name: string }) => {
     return (
       <div className="product-item">
-        <h5 className="mb-2">{item.name}</h5>
+        <h5 className="mb-2">{item?.name}</h5>
       </div>
     );
   };
@@ -38,9 +35,6 @@ export const PickListDemo = () => {
           sourceStyle={{ height: '342px' }}
           targetStyle={{ height: '342px' }}
           onChange={onChange}
-          // filterBy="name"
-          // sourceFilterPlaceholder="Search by name"
-          // targetFilterPlaceholder="Search by name"
         />
       </div>
     </div>
