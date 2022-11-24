@@ -10,6 +10,7 @@ import { FileUploadDemo } from './components/Uploader';
 import { InputSw } from './components/InputSw';
 import { ListBoxX } from './components/ListBoxX';
 import { PickListDemo } from './components/Pisclist';
+import { AutoCompleteDemo } from './components/AutocompleteComp';
 
 function App() {
   const [text, setText] = useState('');
@@ -24,8 +25,12 @@ function App() {
   return (
     <div className="App p-input-filled">
       <header className="App-header">
+        <AutoCompleteDemo />
+        <div>----------------------------------------------------------------------</div>
         <PickListDemo />
+        <div>----------------------------------------------------------------------</div>
         <ListBoxX />
+        <div>----------------------------------------------------------------------</div>
         <Toast ref={toastRef} />
         <FileUploadDemo />
         <span className="p-float-label">

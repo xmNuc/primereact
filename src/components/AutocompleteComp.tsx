@@ -29,7 +29,7 @@ export const AutoCompleteDemo = () => {
 
   return (
     <div className="card">
-      <h5>Basic</h5>
+      <h5>Autocomplete Basic</h5>
       <AutoComplete
         value={selectedCountry1}
         suggestions={filteredCountries}
@@ -37,10 +37,10 @@ export const AutoCompleteDemo = () => {
         field="name"
         onChange={(e) => setSelectedCountry1(e.value)}
         aria-label="Countries"
-        dropdownAriaLabel="Select Country"
+        // dropdownAriaLabel="Select Country"
       />
 
-      <h5>Multiple</h5>
+      <h5>Autocomplete Multiple</h5>
       <span className="p-fluid">
         <AutoComplete
           value={selectedCountries}
@@ -50,7 +50,7 @@ export const AutoCompleteDemo = () => {
           multiple
           onChange={(e) => setSelectedCountries(e.value)}
           aria-label="Countries"
-          dropdownAriaLabel="Select Country"
+          // dropdownAriaLabel="Select Country"
         />
       </span>
     </div>
