@@ -25,6 +25,7 @@ function App() {
   return (
     <div className="App p-input-filled">
       <header className="App-header">
+        <div>----------------------------------------------------------------------</div>
         <AutoCompleteDemo />
         <div>----------------------------------------------------------------------</div>
         <PickListDemo />
