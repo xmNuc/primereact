@@ -11,6 +11,7 @@ import { InputSw } from './components/InputSw';
 import { ListBoxX } from './components/ListBoxX';
 import { PickListDemo } from './components/Pisclist';
 import { AutoCompleteDemo } from './components/AutocompleteComp';
+import { SunEditorComponent } from './components/SunEditorComponent';
 
 function App() {
   const [text, setText] = useState('');
@@ -25,6 +26,7 @@ function App() {
   return (
     <div className="App p-input-filled">
       <header className="App-header">
+        <SunEditorComponent />
         <div>----------------------------------------------------------------------</div>
         <AutoCompleteDemo />
         <div>----------------------------------------------------------------------</div>
