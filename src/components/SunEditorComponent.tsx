@@ -8,6 +8,7 @@ export const SunEditorComponent = () => {
     <div>
       <SunEditor
         min-Height="60vh"
+        height="60vh"
         width="65vw"
         setOptions={{
           buttonList: [
@@ -39,6 +40,7 @@ export const SunEditorComponent = () => {
               'fullScreen',
             ],
           ],
+          //   fontSize: [12, 14, 16, 18, 20],
         }}
       />
     </div>
