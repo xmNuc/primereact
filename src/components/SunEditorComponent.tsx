@@ -1,7 +1,6 @@
 import React from 'react';
 import SunEditor from 'suneditor-react';
 import 'suneditor/dist/css/suneditor.min.css';
-import plugins from 'suneditor/src/plugins';
 
 export const SunEditorComponent = () => {
   return (
