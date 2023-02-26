@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { InputSwitch } from 'primereact/inputswitch';
+import { InputSwitch, InputSwitchChangeEvent } from 'primereact/inputswitch';
 import { Button } from 'primereact/button';
 
 export const InputSw = () => {
-  const [checked1, setChecked1] = useState(false);
+  const [checked1, setChecked1] = useState<boolean>(false);
 
   const handleClick = () => {
     console.log('test');
@@ -13,7 +13,10 @@ export const InputSw = () => {
     <div>
       <div className="card">
         <h5>Input Switch</h5>
-        <InputSwitch checked={checked1} onChange={(e) => setChecked1(e.value)} />
+        <InputSwitch
+          checked={checked1}
+          onChange={(e: InputSwitchChangeEvent) => setChecked1(e.value)}
+        />
       </div>
       <Button label="ClickMe" onClick={handleClick} />
     </div>
