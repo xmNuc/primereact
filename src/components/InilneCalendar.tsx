@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Calendar, CalendarChangeEvent } from 'primereact/calendar';
 
-export default function InlineDemo() {
+export const InlineCalendar = () => {
   const [date, setDate] = useState<Date | null>(null);
 
   return (
@@ -14,4 +14,4 @@ export default function InlineDemo() {
       />
     </div>
   );
-}
+};
