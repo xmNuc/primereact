@@ -3,6 +3,7 @@ import { Calendar, CalendarChangeEvent } from 'primereact/calendar';
 
 export default function IconDoc() {
   const [date, setDate] = useState<string | Date | Date[] | undefined | null>();
+  const [date2, setDate2] = useState<string | Date | Date[] | null>(null);
 
   return (
     <div className="card flex justify-content-center">
@@ -15,6 +16,7 @@ export default function IconDoc() {
         selectionMode="multiple"
         readOnlyInput
       />
+      <Calendar value={date2} onChange={(e) => setDate2(e.value)} view="year" dateFormat="yy" />
     </div>
   );
 }
