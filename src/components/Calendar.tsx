@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { Calendar, CalendarChangeEvent } from 'primereact/calendar';
+import { Nullable } from 'primereact/ts-helpers';
 
 export default function IconDoc() {
-  const [date, setDate] = useState<string | Date | Date[] | undefined | null>();
-  const [date2, setDate2] = useState<string | Date | Date[] | null>(null);
-  const [time, setTime] = useState(null);
+  const [date, setDate] = useState<Nullable<string | Date | Date[]>>();
+  const [date2, setDate2] = useState<Nullable<string | Date | Date[]>>(null);
+  const [time, setTime] = useState<Nullable<string | Date | Date[]>>(null);
 
   return (
     <div className="card flex justify-content-center">
@@ -19,6 +20,7 @@ export default function IconDoc() {
       />
       <Calendar value={date2} onChange={(e) => setDate2(e.value)} view="year" dateFormat="yy" />
       <Calendar value={time} onChange={(e) => setTime(e.value)} timeOnly />
+      <Calendar value={date} onChange={(e) => setDate(e.value)} view="year" dateFormat="yy" />
     </div>
   );
 }
