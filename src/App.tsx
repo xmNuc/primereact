@@ -12,7 +12,7 @@ import { ListBoxX } from './components/ListBoxX';
 import { PickListDemo } from './components/Pisclist';
 import { AutoCompleteDemo } from './components/AutocompleteComp';
 import { SunEditorComponent } from './components/SunEditorComponent';
-import { InlineCalendar } from './components/inilneCalendar';
+import { CalendarComponent } from './components/Calendar';
 
 function App() {
   const [text, setText] = useState('');
@@ -27,7 +27,7 @@ function App() {
   return (
     <div className="App p-input-filled">
       <header className="App-header">
-        <InlineCalendar />
+        <CalendarComponent />
         <div>----------------------------------------------------------------------</div>
         <SunEditorComponent />
         <div>----------------------------------------------------------------------</div>

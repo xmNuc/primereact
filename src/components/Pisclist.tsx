@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { PickList, PickListChangeParams } from 'primereact/picklist';
+import { PickList } from 'primereact/picklist';
 import { data, Idata } from './data';
 
 export const PickListDemo = () => {
@@ -10,7 +10,10 @@ export const PickListDemo = () => {
     setSource(data);
   }, []);
 
-  const onChange = (e: PickListChangeParams) => {
+  const onChange = (e: {
+    source: React.SetStateAction<Idata[]>;
+    target: React.SetStateAction<Idata[]>;
+  }) => {
     setSource(e.source);
     setTarget(e.target);
   };

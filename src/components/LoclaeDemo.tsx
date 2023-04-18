@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { Calendar } from 'primereact/calendar';
 import { addLocale } from 'primereact/api';
+import { Nullable } from 'primereact/ts-helpers';
 
 export default function LocaleDemo() {
-  const [date, setDate] = useState(null);
+  const [date, setDate] = useState<Nullable<string | Date | Date[]>>(null);
 
   addLocale('es', {
     firstDayOfWeek: 1,

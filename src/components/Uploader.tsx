@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { Toast } from 'primereact/toast';
-import { FileUpload, FileUploadItemTemplateType, ItemTemplateOptions } from 'primereact/fileupload';
+import { FileUpload, ItemTemplateOptions } from 'primereact/fileupload';
 import { ProgressBar } from 'primereact/progressbar';
 import { Button } from 'primereact/button';
 import { Tooltip } from 'primereact/tooltip';

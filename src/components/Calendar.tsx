@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Calendar, CalendarChangeEvent } from 'primereact/calendar';
 import { Nullable } from 'primereact/ts-helpers';
 
-export default function IconDoc() {
+export const CalendarComponent = () => {
   const [date, setDate] = useState<Nullable<string | Date | Date[]>>();
   const [date2, setDate2] = useState<Nullable<string | Date | Date[]>>(null);
   const [time, setTime] = useState<Nullable<string | Date | Date[]>>(null);
@@ -30,4 +30,4 @@ export default function IconDoc() {
       />
     </div>
   );
-}
+};
