@@ -13,6 +13,8 @@ import { PickListDemo } from './components/Pisclist';
 import { AutoCompleteDemo } from './components/AutocompleteComp';
 import { SunEditorComponent } from './components/SunEditorComponent';
 import { CalendarComponent } from './components/Calendar';
+import { InlineCalendar } from './components/InilneCalendar';
+import { CalendarChatbot } from './components/ChatbotCalendar';
 
 function App() {
   const [text, setText] = useState('');
@@ -27,6 +29,10 @@ function App() {
   return (
     <div className="App p-input-filled">
       <header className="App-header">
+        <CalendarChatbot />
+        <div>----------------------------------------------------------------------</div>
+        <InlineCalendar />
+        <div>----------------------------------------------------------------------</div>
         <CalendarComponent />
         <div>----------------------------------------------------------------------</div>
         <SunEditorComponent />

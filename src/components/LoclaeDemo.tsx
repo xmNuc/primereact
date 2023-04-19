@@ -6,7 +6,7 @@ import { Nullable } from 'primereact/ts-helpers';
 export default function LocaleDemo() {
   const [date, setDate] = useState<Nullable<string | Date | Date[]>>(null);
 
-  addLocale('es', {
+  addLocale('pl', {
     firstDayOfWeek: 1,
     dayNames: ['domingo', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado'],
     dayNamesShort: ['dom', 'lun', 'mar', 'mié', 'jue', 'vie', 'sáb'],
@@ -45,7 +45,7 @@ export default function LocaleDemo() {
 
   return (
     <div className="card flex justify-content-center">
-      <Calendar value={date} onChange={(e) => setDate(e.value)} locale="es" />
+      <Calendar value={date} onChange={(e) => setDate(e.value)} locale="pl" />
     </div>
   );
 }
